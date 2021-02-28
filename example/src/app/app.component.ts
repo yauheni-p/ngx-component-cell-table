@@ -27,7 +27,7 @@ const tableHeaders: TableHeader[] = [
   {
     key: 'color',
     value: 'Color',
-    component: ColorNodeComponent,
+    component: ColorNodeComponent, // Pass here component inherited from DynamicNode<T> where T - type of your data source element.
   },
 ];
 

@@ -1,24 +1,15 @@
-# ComponentCellTable
+# ngx-component-cell-table
+### Angular table with component nodes
+![img.png](img.png)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+## Install
 
-## Code scaffolding
+Run `npm i ngx-component-cell-table` to install.
 
-Run `ng generate component component-name --project component-cell-table` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project component-cell-table`.
-> Note: Don't forget to add `--project component-cell-table` or else it will be added to the default project in your `angular.json` file. 
+## Usage
 
-## Build
+[Stackblitz](https://stackblitz.com/edit/angular-gfxr7d) live example.
 
-Run `ng build component-cell-table` to build the project. The build artifacts will be stored in the `dist/` directory.
+![img_1.png](img_1.png)
 
-## Publishing
 
-After building your library with `ng build component-cell-table`, go to the dist folder `cd dist/component-cell-table` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test component-cell-table` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
