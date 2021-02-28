@@ -3,6 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "ngx-component-cell-table": [
+        "component-cell-table/src/public-api.ts"
+//        "dist/component-cell-table/component-cell-table",
+//        "dist/component-cell-table"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

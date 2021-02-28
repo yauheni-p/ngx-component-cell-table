@@ -1,0 +1,17 @@
+<div class='app-container'>
+  <div class='table-counter'><span><em>{{ selectedItems.length }} items selected</em></span></div>
+
+
+  <ngx-table
+    [data]='cars$ | async'
+    [headers]='headers'
+    [options]='options'
+    [pageSize]='pageSize'
+    [totalItems]='totalItems$ | async'
+    (pageChange)='onPageChange($event)'
+    (selectionChange)='onSelectionChange($event)'
+    (nodeEvent)='onNodeEvent($event)'
+    (sortChange)='onSortChange($event)'
+  ></ngx-table>
+
+</div>

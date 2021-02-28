@@ -1,0 +1,70 @@
+<div class='dynamic-table-container'>
+  <table class='dynamic-table'>
+    <tr class='dynamic-table-header-row' *ngIf='options?.hasHeader'>
+      <th
+        class='dynamic-table-header select-column-header'
+        *ngIf='options?.isSelectable'
+      >
+        <div
+          class='dynamic-table-header-container select-column-header-container'
+        >
+          <input
+            [(ngModel)]='checkAllState'
+            type='checkbox'
+            (ngModelChange)='onCheckAllChange($event)'
+          />
+        </div>
+      </th>
+      <th class='dynamic-table-header' *ngFor='let header of headers'>
+        <div class='dynamic-table-header-container'>
+          <div class='header-text'>{{ header.value }}</div>
+          <ngx-table-sort
+            class='sort-icon'
+            *ngIf='header.isSortable'
+            [isActive]='isActiveHeader(header)'
+            [sortOrder]='
+              !isActiveHeader(header) ? false : activeSortHeaderValue
+            '
+            (sortChange)='onSortChange(header, $event)'
+          >
+          </ngx-table-sort>
+        </div>
+      </th>
+    </tr>
+
+    <tr *ngFor='let row of data' class='dynamic-table-data-row'>
+      <td
+        *ngIf='options && options.isSelectable'
+        class='dynamic-table-select-cell'
+      >
+        <input
+          ngModel
+          type='checkbox'
+          (ngModelChange)='onElementSelected(row, $event)'
+          [checked]='isChecked(row)'
+        />
+      </td>
+      <td *ngFor='let header of headers' class='dynamic-table-data-cell'>
+
+        <ngx-dynamic-node
+          [element]='row'
+          [header]='header'
+          (nodeEvent)='onNodeEvent($event)'
+        ></ngx-dynamic-node>
+      </td>
+    </tr>
+  </table>
+
+  <ng-container *ngIf='paginatorTemplate; else defaultPaginator'>
+    <ng-container *ngTemplateOutlet='paginatorTemplate'></ng-container>
+  </ng-container>
+
+  <ng-template #defaultPaginator>
+    <ngx-paginator
+      (pageChange)='onPageChange($event)'
+      [pageSize]='pageSize'
+      [totalItems]='totalItems'
+    ></ngx-paginator>
+  </ng-template>
+
+</div>

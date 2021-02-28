@@ -1,0 +1,47 @@
+body {
+  background-color: #c5d3f6;
+}
+
+.dynamic-table-header {
+  background-color: #6d7ae0;
+  color: white;
+}
+
+.dynamic-table-data-cell, .dynamic-table-header-container {
+  padding: 10px;
+}
+
+.dynamic-table-data-row {
+  background-color: white;
+}
+
+.dynamic-table-data-row:hover td {
+  background-color: #f1f4ff;
+}
+
+.dynamic-table-select-cell {
+  width: 20px;
+  padding: 10px;
+}
+
+.active-sort-icon {
+  fill: white !important;
+}
+
+.inactive-sort-icon {
+  fill: white !important;
+  fill-opacity: 0.4
+}
+
+table {
+  border-collapse:collapse
+}
+
+.ngx-paginator-container {
+  padding: 10px;
+  background-color: white;
+}
+
+.ngx-paginator-buttons-container {
+  margin:auto 0 auto auto
+}

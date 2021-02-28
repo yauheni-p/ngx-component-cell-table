@@ -1,0 +1,6 @@
+<div class='dynamic-table-node'>
+  <ng-container *ngIf='!header.component'>{{
+    element[header.key]
+    }}</ng-container>
+  <ng-container #elseBlock></ng-container>
+</div>

@@ -1,0 +1,19 @@
+
+.app-container {
+  width: 1000px;
+  margin: 100px auto;
+
+  .table-counter {
+    padding: 10px 20px;
+    width: fit-content;
+    border-bottom: 40px solid #6d7ae0;
+    border-left: 0 solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 0 solid transparent;
+    span {
+      position: relative;
+      bottom: -38px;
+      color: white;
+    }
+  }
+}
