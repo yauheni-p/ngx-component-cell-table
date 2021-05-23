@@ -10,7 +10,6 @@ import { Car } from '../../app.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorNodeComponent extends DynamicNode<Car> {
-  element: any;
   onClick() {
     this.emitData('Some data from node component');
     alert(`Car: ${this.element.model}, color: ${this.element.color}`);
