@@ -1,6 +1,14 @@
 {
   "name": "ngx-component-cell-table",
-  "version": "2.0.8",
+  "version": "2.0.9",
+  "keywords": [
+    "table",
+    "lightweight",
+    "dynamic",
+    "angular",
+    "ng",
+    "ngx"
+  ],
   "repository": {
   "type": "git",
   "url": "https://github.com/yauheni-p/ngx-component-cell-table.git"
@@ -11,5 +19,6 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "description": "Angular lightweight table"
 }
